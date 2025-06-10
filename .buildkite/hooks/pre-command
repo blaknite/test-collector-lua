@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+
+export LUAROCKS_API_TOKEN=$(buildkite-agent secret get LUAROCKS_API_TOKEN)
+export TEST_COLLECTOR_LUA_TOKEN=$(buildkite-agent secret get TEST_COLLECTOR_LUA_TOKEN)

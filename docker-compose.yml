@@ -1,0 +1,18 @@
+services:
+  test:
+    build:
+      context: .
+    command: sh
+    environment:
+      - BUILDKITE_BUILD_NUMBER
+      - BUILDKITE_BUILD_ID
+      - BUILDKITE_BUILD_URL
+      - BUILDKITE_BRANCH
+      - BUILDKITE_COMMIT
+      - BUILDKITE_JOB_ID
+      - BUILDKITE_MESSAGE
+      - BUILDKITE_ANALYTICS_TOKEN_VAR
+      - TEST_COLLECTOR_LUA_TOKEN
+    volumes:
+      - .:/app
+    working_dir: /app

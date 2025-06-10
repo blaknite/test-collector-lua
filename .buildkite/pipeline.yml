@@ -1,0 +1,17 @@
+steps:
+  - name: ":lua: busted"
+    key: busted
+    command:
+      - busted -o buildkite-test-collector.busted
+    env:
+      BUILDKITE_ANALYTICS_TOKEN_VAR: TEST_COLLECTOR_LUA_TOKEN
+    plugins:
+      docker-compose#v5.4.0:
+        run: test
+  - block: "Publish?"
+    depends_on: busted
+  - name: ":shipit: publish to luarocks"
+    command: bin/publish
+    plugins:
+      docker-compose#v5.4.0:
+        run: test

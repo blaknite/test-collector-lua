@@ -35,6 +35,6 @@ dependencies = {
 build = {
    type = "builtin",
    modules = {
-      ["buildkite-test-collector.busted"] = "buildkite-test-collector/busted.lua"
+      ["buildkite-test-collector.busted"] = "buildkite-test-collector/busted.lua",
    }
 }
