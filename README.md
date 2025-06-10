@@ -1,10 +1,8 @@
-# Custom Busted Output Handlers
-
-This directory contains custom output handlers for the Busted Lua testing framework.
-
-## test_engine.lua
+# Buildkite Test Collector
 
 A custom output handler that combines intelligent terminal display with direct upload to Buildkite Test Engine, providing rich test analytics and failure diagnostics for CI/CD integration.
+
+## Use with Busted
 
 ### Usage
 
